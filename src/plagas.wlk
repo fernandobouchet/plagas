@@ -4,7 +4,7 @@ class Plaga {
 	method nivelDeDanio() {
 		return poblacion
 	}
-	method transmitenEnfermedades() {
+	method transmiteEnfermedades() {
 		return poblacion >= 10
 	}
 	
@@ -16,7 +16,7 @@ class Cucarachas inherits Plaga {
 	override method nivelDeDanio() {
 		return super() / 2
 	}
-	override method transmitenEnfermedades() {
+	override method transmiteEnfermedades() {
 		return super() and pesoPromedio >= 10
 	}
 }
@@ -31,7 +31,7 @@ class Garrapatas inherits Pulgas {
 }
 
 class Mosquitos inherits Plaga {
-	override method transmitenEnfermedades() {
+	override method transmiteEnfermedades() {
 		return super() and poblacion % 3 == 0
 	}
 }
